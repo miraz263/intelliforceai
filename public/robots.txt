@@ -1,0 +1,5 @@
+# IntelliForceAI Robots Directive
+User-agent: *
+Allow: /
+
+Sitemap: https://intelliforceai.ai/sitemap.xml

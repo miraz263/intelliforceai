@@ -1,0 +1,201 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color Tokens - Light Theme */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --surface: 0 0% 100%;
+    --surface-foreground: 222 47% 11%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 191 97% 77%;
+    --accent-foreground: 222 47% 11%;
+
+    --muted: 210 40% 93.9%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --border: 214.3 31.8% 85.5%;
+    --input: 214.3 31.8% 85.5%;
+    --ring: 217 91% 60%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 40% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 222 47% 11%;
+
+    --danger: 0 84.2% 60.2%;
+    --danger-foreground: 210 40% 98%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 210 40% 98%;
+
+    --radius: 0.75rem;
+
+    /* Shadow Tokens */
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-glow: 0 0 40px -5px rgba(59, 130, 246, 0.25);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  }
+
+  .dark {
+    /* Color Tokens - Dark Theme */
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --surface: 222 47% 7%;
+    --surface-foreground: 213 31% 91%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 19% 27%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 187 92% 69%;
+    --accent-foreground: 222 47% 11%;
+
+    --muted: 217 33% 14%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --border: 217 33% 17.5%;
+    --input: 217 33% 17.5%;
+    --ring: 217 91% 60%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 224 71% 4%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 224 71% 4%;
+
+    --danger: 0 72% 51%;
+    --danger-foreground: 210 40% 98%;
+
+    --info: 199 89% 48%;
+    --info-foreground: 210 40% 98%;
+
+    --shadow-glow: 0 0 50px -5px rgba(12, 142, 242, 0.35);
+    --shadow-glass: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-feature-settings: "rlig" 1, "calt" 1;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Accessibility Focus Rings */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism Presets */
+  .glass-card {
+    background: rgba(var(--surface), 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--border) / 0.5);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .dark .glass-card {
+    background: rgba(12, 16, 29, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .dark .glass-panel {
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-cyan-400 to-violet-500;
+  }
+
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+
+  /* Typography Utility Classes */
+  .text-display-xl {
+    @apply text-5xl font-extrabold tracking-tight sm:text-7xl lg:text-8xl;
+  }
+
+  .text-display {
+    @apply text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl;
+  }
+
+  .text-h1 {
+    @apply text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl;
+  }
+
+  .text-h2 {
+    @apply text-2xl font-bold tracking-tight sm:text-3xl lg:text-4xl;
+  }
+
+  .text-h3 {
+    @apply text-xl font-semibold tracking-tight sm:text-2xl;
+  }
+
+  .text-h4 {
+    @apply text-lg font-semibold tracking-tight sm:text-xl;
+  }
+
+  .text-body-lg {
+    @apply text-lg leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base leading-normal;
+  }
+
+  .text-small {
+    @apply text-sm leading-normal;
+  }
+
+  .text-caption {
+    @apply text-xs leading-normal text-muted-foreground;
+  }
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+

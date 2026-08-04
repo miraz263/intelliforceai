@@ -1,0 +1,13 @@
+/* TEAM */
+  Founder & Chief Scientist: Dr. Sarah Jenkins
+  Chief Technology Officer: Dr. Aris Thorne
+  VP of Systems Engineering: Elena Rostova
+  Lead AI Researcher: Marcus Vance
+
+/* SITE & TECH STACK */
+  Framework: Next.js 15 (App Router - Static Export)
+  Language: TypeScript (Strict)
+  Styling: Tailwind CSS & Vanilla CSS Design System Tokens
+  Animations: Framer Motion & GSAP
+  Backend: Lock-free Rust IPC & Static cPanel PHP Mailer
+  Host Target: cPanel Shared Hosting (public_html)
