@@ -34,3 +34,6 @@ next-env.d.ts
 *.pem
 .vscode/
 .idea/
+
+# visit counter runtime data
+public/visits.count

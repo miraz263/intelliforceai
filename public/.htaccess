@@ -44,6 +44,11 @@
 # 4. Custom Error Handling
 ErrorDocument 404 /404.html
 
+# 4b. Block direct public access to the visit counter's raw data file
+<Files "visits.count">
+  Require all denied
+</Files>
+
 # 5. Enable Rewrite Engine for Clean URLs & HTTPS Redirect
 <IfModule mod_rewrite.c>
   RewriteEngine On

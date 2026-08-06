@@ -147,4 +147,32 @@ export const productsData: ProductItem[] = [
     demoUrl: '/products',
     detailsUrl: '/products',
   },
+  {
+    id: 'tradeflow-lite',
+    name: 'TradeFlow Lite',
+    category: 'Enterprise',
+    status: 'Released',
+    description:
+      'Cloud-based Trading ERP for import-export businesses — multi-warehouse inventory, double-entry accounting, CRM, and manufacturing in one system.',
+    iconName: 'Warehouse',
+    technologies: ['Go', 'Fiber', 'Next.js', 'PostgreSQL'],
+    tags: ['Trading ERP', 'Multi-Warehouse', 'Accounting', 'SaaS'],
+    screenshot: 'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1000&auto=format&fit=crop',
+    demoUrl: '/products',
+    detailsUrl: '/products',
+  },
+  {
+    id: 'ocs',
+    name: 'OCS — Capital Markets Platform',
+    category: 'Enterprise',
+    status: 'Beta',
+    description:
+      'Back-office platform for Bangladeshi brokerages — client KYC, DSE-rule order management, trade settlement, and CDBL reconciliation.',
+    iconName: 'LineChart',
+    technologies: ['Go', 'Gin', 'PostgreSQL', 'React'],
+    tags: ['Capital Markets', 'DSE/CSE', 'Compliance', 'Beta'],
+    screenshot: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1000&auto=format&fit=crop',
+    demoUrl: '/products',
+    detailsUrl: '/products',
+  },
 ];

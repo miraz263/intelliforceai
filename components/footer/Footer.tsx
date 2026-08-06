@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Send, CheckCircle2 } from 'lucide-react';
 import { Logo } from '@/components/ui/Logo';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
+import { VisitCounter } from '@/components/ui/VisitCounter';
 import { siteConfig } from '@/config/site';
 
 export function Footer() {
@@ -137,9 +138,12 @@ export function Footer() {
 
         {/* Bottom Bar: Copyright & Theme Toggle */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>
-            © {new Date().getFullYear()} {siteConfig.name}, Inc. All rights reserved. Built for static export deployment.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+            <p>
+              © {new Date().getFullYear()} {siteConfig.name}, Inc. All rights reserved. Built for static export deployment.
+            </p>
+            <VisitCounter />
+          </div>
 
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:underline">

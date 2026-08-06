@@ -14,3 +14,4 @@ export * from './ShareButtons';
 export * from './Accordion';
 export * from './SkipToContent';
 export * from './LanguageSwitcher';
+export * from './VisitCounter';

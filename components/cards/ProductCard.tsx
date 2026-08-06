@@ -9,6 +9,8 @@ import {
   FileText,
   Mic,
   Building2,
+  Warehouse,
+  LineChart,
   ExternalLink,
   ArrowRight,
 } from 'lucide-react';
@@ -26,6 +28,8 @@ const iconMap: Record<string, React.ReactNode> = {
   FileText: <FileText className="h-6 w-6 text-pink-400" />,
   Mic: <Mic className="h-6 w-6 text-sky-400" />,
   Building2: <Building2 className="h-6 w-6 text-indigo-400" />,
+  Warehouse: <Warehouse className="h-6 w-6 text-orange-400" />,
+  LineChart: <LineChart className="h-6 w-6 text-teal-400" />,
 };
 
 const statusBadgeMap: Record<ProductStatus, { variant: 'success' | 'info' | 'accent' | 'warning'; label: string }> = {
