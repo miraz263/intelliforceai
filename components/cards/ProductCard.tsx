@@ -19,7 +19,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/buttons/Button';
 import { GlassCard } from '@/components/cards/GlassCard';
 
-const iconMap: Record<string, React.ReactNode> = {
+export const productIconMap: Record<string, React.ReactNode> = {
   Cpu: <Cpu className="h-6 w-6 text-blue-400" />,
   Download: <Download className="h-6 w-6 text-cyan-400" />,
   Boxes: <Boxes className="h-6 w-6 text-violet-400" />,
@@ -32,7 +32,10 @@ const iconMap: Record<string, React.ReactNode> = {
   LineChart: <LineChart className="h-6 w-6 text-teal-400" />,
 };
 
-const statusBadgeMap: Record<ProductStatus, { variant: 'success' | 'info' | 'accent' | 'warning'; label: string }> = {
+export const productStatusBadgeMap: Record<
+  ProductStatus,
+  { variant: 'success' | 'info' | 'accent' | 'warning'; label: string }
+> = {
   Released: { variant: 'success', label: 'Released' },
   Beta: { variant: 'info', label: 'Beta' },
   Enterprise: { variant: 'accent', label: 'Enterprise' },
@@ -40,8 +43,8 @@ const statusBadgeMap: Record<ProductStatus, { variant: 'success' | 'info' | 'acc
 };
 
 export function ProductCard({ product }: { product: ProductItem }) {
-  const icon = iconMap[product.iconName] || <Cpu className="h-6 w-6 text-primary" />;
-  const statusInfo = statusBadgeMap[product.status];
+  const icon = productIconMap[product.iconName] || <Cpu className="h-6 w-6 text-primary" />;
+  const statusInfo = productStatusBadgeMap[product.status];
 
   return (
     <GlassCard
