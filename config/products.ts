@@ -189,8 +189,8 @@ export const productsData: ProductItem[] = [
     detailsUrl: '/products/enterprise-erp',
   },
   {
-    id: 'tradeflow-lite',
-    name: 'TradeFlow Lite',
+    id: 'tradeflow',
+    name: 'TradeFlow',
     category: 'Enterprise',
     status: 'Released',
     description:
@@ -205,7 +205,7 @@ export const productsData: ProductItem[] = [
     ],
     screenshot: 'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?q=80&w=1000&auto=format&fit=crop',
     demoUrl: '/products',
-    detailsUrl: '/products/tradeflow-lite',
+    detailsUrl: '/products/tradeflow',
   },
   {
     id: 'ocs',
